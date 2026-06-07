@@ -149,11 +149,15 @@ export default function Hero() {
 
   const headline = t("hero.headline");
 
-  // Replace ₂ unicode subscript with a properly sized <sub> so it's visible at large sizes
+  // Replace ₂ unicode subscript with a positioned span — <sub> with lineHeight fights gradient-text clipping
   const withSub = (text: string) =>
     text.split(/(CO₂)/g).map((part, i) =>
       part === "CO₂"
-        ? <span key={i}>CO<sub style={{ fontSize: "0.55em", verticalAlign: "sub", lineHeight: 0 }}>2</sub></span>
+        ? (
+          <span key={i} style={{ whiteSpace: "nowrap" }}>
+            CO<span style={{ fontSize: "0.52em", position: "relative", top: "0.22em" }}>2</span>
+          </span>
+        )
         : part
     );
 
