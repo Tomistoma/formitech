@@ -149,13 +149,20 @@ export default function Hero() {
 
   const headline = t("hero.headline");
 
-  // Replace ₂ unicode subscript with a positioned span — <sub> with lineHeight fights gradient-text clipping
+  // The parent gradient-text span sets -webkit-text-fill-color: transparent via CSS.
+  // Child spans inherit that and become invisible unless we explicitly override the fill.
   const withSub = (text: string) =>
     text.split(/(CO₂)/g).map((part, i) =>
       part === "CO₂"
         ? (
           <span key={i} style={{ whiteSpace: "nowrap" }}>
-            CO<span style={{ fontSize: "0.52em", position: "relative", top: "0.22em" }}>2</span>
+            CO<span style={{
+              fontSize: "0.5em",
+              position: "relative",
+              top: "0.2em",
+              WebkitTextFillColor: "#2dd4bf",
+              color: "#2dd4bf",
+            }}>2</span>
           </span>
         )
         : part
