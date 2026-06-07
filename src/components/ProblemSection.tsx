@@ -54,7 +54,6 @@ export default function ProblemSection() {
   const headerRef = useRef<HTMLDivElement>(null);
   const card1Ref = useRef<HTMLDivElement>(null);
   const card2Ref = useRef<HTMLDivElement>(null);
-  const conclusionRef = useRef<HTMLDivElement>(null);
 
   const rawPoints = t("problem.plastic.points", { returnObjects: true });
   const points = Array.isArray(rawPoints) ? rawPoints as string[] : [];
@@ -73,10 +72,6 @@ export default function ProblemSection() {
         x: 0, opacity: 1, duration: 0.8, ease: "power3.out",
         scrollTrigger: { trigger: card2Ref.current, start: "top 82%" },
         delay: 0.1,
-      });
-      gsap.fromTo(conclusionRef.current, { y: 30, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.7, ease: "power3.out",
-        scrollTrigger: { trigger: conclusionRef.current, start: "top 88%" },
       });
     }, sectionRef);
     return () => ctx.revert();
@@ -107,7 +102,7 @@ export default function ProblemSection() {
         </div>
 
         {/* Two crisis cards */}
-        <div className="grid lg:grid-cols-2 gap-5 mb-8">
+        <div className="grid lg:grid-cols-2 gap-5">
           {/* ETS Crisis */}
           <div
             ref={card1Ref}
@@ -164,16 +159,30 @@ export default function ProblemSection() {
               </span>
             </div>
 
-            {/* Plastic crisis icon */}
-            <div className="mb-6">
-              <svg viewBox="0 0 80 50" className="w-20 h-12 opacity-60">
-                <rect x="5" y="20" width="30" height="20" rx="3" fill="#ef4444" fillOpacity="0.2" stroke="#ef4444" strokeOpacity="0.4" strokeWidth="1" />
-                <line x1="20" y1="8" x2="20" y2="20" stroke="#ef4444" strokeOpacity="0.4" strokeWidth="1.5" />
-                <line x1="15" y1="8" x2="25" y2="8" stroke="#ef4444" strokeOpacity="0.4" strokeWidth="2" strokeLinecap="round" />
-                {/* X mark */}
-                <line x1="48" y1="18" x2="68" y2="38" stroke="#ef4444" strokeOpacity="0.7" strokeWidth="2.5" strokeLinecap="round" />
-                <line x1="68" y1="18" x2="48" y2="38" stroke="#ef4444" strokeOpacity="0.7" strokeWidth="2.5" strokeLinecap="round" />
-              </svg>
+            {/* Degradation comparison visual */}
+            <div className="mb-6 flex flex-col gap-3">
+              {[
+                { label: "PP / PE", years: "450+ let", pct: 100, color: "#ef4444", note: "nebiodegraduje" },
+                { label: "PLA", years: "kompostárna", pct: 55, color: "#f59e0b", note: "pouze průmyslové podmínky" },
+                { label: "PHB", years: "180 dní", pct: 18, color: "#22c55e", note: "v půdě, vodě, moři" },
+              ].map((item) => (
+                <div key={item.label}>
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-white/60 text-xs font-medium">{item.label}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-semibold" style={{ color: item.color }}>{item.years}</span>
+                      <span className="text-white/25 text-xs">{item.note}</span>
+                    </div>
+                  </div>
+                  <div className="h-1.5 rounded-full bg-white/6 overflow-hidden">
+                    <div
+                      className="h-full rounded-full transition-all"
+                      style={{ width: `${item.pct}%`, background: item.color, opacity: 0.7 }}
+                    />
+                  </div>
+                </div>
+              ))}
+              <p className="text-white/30 text-xs mt-1">Čas biodegradace v přírodním prostředí</p>
             </div>
 
             <div className="flex flex-col gap-3 mb-5">
@@ -189,19 +198,6 @@ export default function ProblemSection() {
           </div>
         </div>
 
-        {/* Conclusion banner */}
-        <div
-          ref={conclusionRef}
-          className="relative rounded-2xl border border-[oklch(62%_0.20_162/30%)] bg-[oklch(62%_0.20_162/8%)] p-6 text-center overflow-hidden"
-        >
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_100%_at_50%_50%,oklch(62%_0.20_162/6%),transparent)]" />
-          <p
-            className="relative text-lg md:text-xl font-semibold gradient-text"
-            style={{ fontFamily: "Space Grotesk, sans-serif" }}
-          >
-            {t("problem.conclusion")}
-          </p>
-        </div>
       </div>
     </section>
   );

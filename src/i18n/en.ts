@@ -179,7 +179,7 @@ export const en = {
     badge: "About us",
     headline: "The team changing the world",
     subheadline:
-      "We are a group of scientists, engineers, and visionaries from leading Czech and European universities who believe that industrial emissions are feedstock, not waste.",
+      "Two founders, one goal: bridge economics and science so that industrial CO₂ emissions stop being a liability and become a raw material.",
     mission:
       "Our mission is to accelerate industrial decarbonization by turning inevitable CO₂ emissions into valuable materials.",
   },

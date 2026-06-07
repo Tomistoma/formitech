@@ -149,6 +149,14 @@ export default function Hero() {
 
   const headline = t("hero.headline");
 
+  // Replace ₂ unicode subscript with a properly sized <sub> so it's visible at large sizes
+  const withSub = (text: string) =>
+    text.split(/(CO₂)/g).map((part, i) =>
+      part === "CO₂"
+        ? <span key={i}>CO<sub style={{ fontSize: "0.55em", verticalAlign: "sub", lineHeight: 0 }}>2</sub></span>
+        : part
+    );
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Background canvas */}
@@ -177,11 +185,11 @@ export default function Hero() {
           {headline.split("\n").map((line, i) =>
             i === 0 ? (
               <span key={i} className="block text-white">
-                {line}
+                {withSub(line)}
               </span>
             ) : (
               <span key={i} className="block gradient-text glow-text">
-                {line}
+                {withSub(line)}
               </span>
             )
           )}

@@ -45,11 +45,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[oklch(79%_0.18_162)] to-[oklch(78%_0.15_185)] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-            <span className="text-[oklch(8%_0.01_250)] font-bold text-sm font-[Space_Grotesk]">F</span>
-          </div>
-          <span className="font-semibold text-white text-base tracking-tight" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
+        <a href="#" className="group">
+          <span className="font-bold text-white text-lg tracking-tight gradient-text" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
             Formitech
           </span>
         </a>

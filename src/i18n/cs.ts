@@ -179,7 +179,7 @@ export const cs = {
     badge: "O nás",
     headline: "Tým, který mění svět",
     subheadline:
-      "Jsme skupina vědců, inženýrů a vizionářů z prestižních českých a evropských univerzit, kteří věří, že průmyslové emise jsou surovina, ne odpad.",
+      "Dva zakladatelé, jeden cíl: propojit ekonomiku a vědu tak, aby průmyslové emise CO₂ přestaly být nákladem a staly se surovinou.",
     mission:
       "Naším posláním je urychlit dekarbonizaci průmyslu tím, že z nevyhnutelných emisí CO₂ vytváříme hodnotné materiály.",
   },

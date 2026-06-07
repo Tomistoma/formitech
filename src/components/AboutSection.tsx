@@ -6,20 +6,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const teamMembers = [
-  { name: "Dr. Jana Nováková", role: "CEO & Co-founder", area: "Elektrochemie" },
-  { name: "Ing. Tomáš Marek", role: "CTO & Co-founder", area: "Syntetická biologie" },
-  { name: "Dr. Petra Horáčková", role: "Chief Science Officer", area: "Katalýza" },
-  { name: "Ing. Martin Šimánek", role: "Head of Engineering", area: "Procesní inženýrství" },
+  { name: "Ing. Michal Salem", role: "Co-founder", area: "Ekonomika & Business" },
+  { name: "Mgr. Tomáš Svoboda", role: "Co-founder", area: "Technologie & Věda" },
 ];
 
 const teamMembersEn = [
-  { name: "Dr. Jana Nováková", role: "CEO & Co-founder", area: "Electrochemistry" },
-  { name: "Ing. Tomáš Marek", role: "CTO & Co-founder", area: "Synthetic Biology" },
-  { name: "Dr. Petra Horáčková", role: "Chief Science Officer", area: "Catalysis" },
-  { name: "Ing. Martin Šimánek", role: "Head of Engineering", area: "Process Engineering" },
+  { name: "Ing. Michal Salem", role: "Co-founder", area: "Economics & Business" },
+  { name: "Mgr. Tomáš Svoboda", role: "Co-founder", area: "Technology & Science" },
 ];
 
-const avatarColors = ["#22c55e", "#2dd4bf", "#4ade80", "#86efac"];
+const avatarColors = ["#22c55e", "#2dd4bf"];
 
 export default function AboutSection() {
   const { t, i18n } = useTranslation();
@@ -87,7 +83,7 @@ export default function AboutSection() {
         </div>
 
         {/* Team grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
           {members.map((member, i) => (
             <div
               key={i}

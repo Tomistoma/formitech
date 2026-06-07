@@ -19,11 +19,8 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start justify-between gap-10 mb-12">
           {/* Brand */}
           <div className="max-w-xs">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[oklch(79%_0.18_162)] to-[oklch(78%_0.15_185)] flex items-center justify-center">
-                <span className="text-[oklch(8%_0.01_250)] font-bold text-sm" style={{ fontFamily: "Space Grotesk, sans-serif" }}>F</span>
-              </div>
-              <span className="font-semibold text-white text-base" style={{ fontFamily: "Space Grotesk, sans-serif" }}>Formitech</span>
+            <div className="mb-4">
+              <span className="font-bold text-lg gradient-text" style={{ fontFamily: "Space Grotesk, sans-serif" }}>Formitech</span>
             </div>
             <p className="text-white/35 text-sm leading-relaxed">{t("footer.tagline")}</p>
             <div className="flex items-center gap-1.5 mt-4">
