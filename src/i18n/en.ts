@@ -5,6 +5,7 @@ export const en = {
     process: "Process",
     phb: "PHB",
     impact: "Impact",
+    invest: "Investors",
     contact: "Contact",
   },
   problem: {
@@ -36,6 +37,7 @@ export const en = {
   hero: {
     badge: "Clean chemistry of the future",
     headline: "We turn\nCO₂ into plastic",
+    invest_link: "Pre-seed round open →",
     subheadline:
       "Using electrocatalysis and synthetic biology, we convert industrial CO₂ emissions into formate and then into the biodegradable bioplastic PHB.",
     cta_primary: "How it works",
@@ -200,6 +202,50 @@ export const en = {
     info: {
       location: "Prague, Czech Republic",
       email: "hello@formitech.cz",
+    },
+  },
+  invest: {
+    badge: "Investment Opportunity",
+    headline: "Pre-seed round\nis open",
+    subheadline: "We're looking for our first investor to help us build the pilot unit and validate the path to commercial operation.",
+    funding: {
+      amount: "100k",
+      currency: "€",
+      label: "pre-seed",
+      description: "We're opening our first investment round to build a pilot unit at the Velkopopovický Brewery site. Funds go directly to technology validation and first customer deliveries.",
+      cta: "I want to invest",
+      use: [
+        { label: "Pilot unit", desc: "Build electrolyzer + bioreactor at Velkopopovice", pct: "55%" },
+        { label: "R&D", desc: "Process optimization, PHB yield improvement", pct: "30%" },
+        { label: "Certification & regulatory", desc: "Process certification, customer validation", pct: "15%" },
+      ],
+    },
+    revenue: {
+      title: "Three revenue streams",
+      streams: [
+        {
+          label: "PHB pellet sales",
+          desc: "B2B sales of biodegradable thermoplastic pellets to processors. Target price €5–8/kg at 70k kg/yr production.",
+          highlight: "€5–8 / kg",
+        },
+        {
+          label: "EU ETS savings sharing",
+          desc: "Industrial partners share part of their saved emissions costs. Every captured tonne of CO₂ = €75–149 saved.",
+          highlight: "€75–149 / t CO₂",
+        },
+        {
+          label: "Process licensing",
+          desc: "Mid-term goal: license the electrocatalytic process to other European producers without own production required.",
+          highlight: "mid-term horizon",
+        },
+      ],
+    },
+    market: {
+      title: "Addressable market",
+      subtitle: "2030 projection",
+      tam: { label: "TAM", name: "Total market", desc: "European biodegradable thermoplastics market", value: "€800M / yr" },
+      sam: { label: "SAM", name: "Serviceable market", desc: "Manufacturers near CO₂ sources in CZ + DE + AT + SK", value: "€90M / yr" },
+      som: { label: "SOM", name: "Realistic target", desc: "Formitech 2030 at 70k kg / yr capacity", value: "€3.5M / yr" },
     },
   },
   footer: {

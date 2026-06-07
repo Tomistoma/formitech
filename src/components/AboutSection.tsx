@@ -106,7 +106,7 @@ export default function AboutSection() {
                   className="text-xl font-bold"
                   style={{ color: avatarColors[i], fontFamily: "Space Grotesk, sans-serif" }}
                 >
-                  {member.name.split(" ").map(w => w[0]).filter(c => c === c.toUpperCase()).slice(0, 2).join("")}
+                  {member.name.split(" ").filter(w => !w.endsWith(".")).map(w => w[0].toUpperCase()).slice(0, 2).join("")}
                 </span>
               </div>
               <div className="font-semibold text-white text-sm mb-0.5" style={{ fontFamily: "Space Grotesk, sans-serif" }}>

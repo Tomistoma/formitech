@@ -210,21 +210,30 @@ export default function Hero() {
           {t("hero.subheadline")}
         </p>
 
-        <div ref={ctaRef} className="flex items-center justify-center gap-4 flex-wrap">
+        <div ref={ctaRef} className="flex flex-col items-center gap-5">
+          <div className="flex items-center justify-center gap-4 flex-wrap">
+            <a
+              href="#process"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[oklch(62%_0.20_162)] hover:bg-[oklch(70%_0.20_162)] text-[oklch(8%_0.01_250)] font-semibold text-sm transition-all duration-300 glow-btn"
+            >
+              {t("hero.cta_primary")}
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <path fillRule="evenodd" clipRule="evenodd" d="M8 1a.5.5 0 01.5.5v11.793l3.146-3.147a.5.5 0 01.708.708l-4 4a.5.5 0 01-.708 0l-4-4a.5.5 0 01.708-.708L7.5 13.293V1.5A.5.5 0 018 1z" />
+              </svg>
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-white/15 hover:border-white/30 text-white/70 hover:text-white font-semibold text-sm transition-all duration-300"
+            >
+              {t("hero.cta_secondary")}
+            </a>
+          </div>
           <a
-            href="#process"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[oklch(62%_0.20_162)] hover:bg-[oklch(70%_0.20_162)] text-[oklch(8%_0.01_250)] font-semibold text-sm transition-all duration-300 glow-btn"
+            href="#invest"
+            className="inline-flex items-center gap-2 text-xs text-white/40 hover:text-[#fbbf24] transition-colors duration-300 group"
           >
-            {t("hero.cta_primary")}
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-              <path fillRule="evenodd" clipRule="evenodd" d="M8 1a.5.5 0 01.5.5v11.793l3.146-3.147a.5.5 0 01.708.708l-4 4a.5.5 0 01-.708 0l-4-4a.5.5 0 01.708-.708L7.5 13.293V1.5A.5.5 0 018 1z" />
-            </svg>
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-white/15 hover:border-white/30 text-white/70 hover:text-white font-semibold text-sm transition-all duration-300"
-          >
-            {t("hero.cta_secondary")}
+            <span className="w-1.5 h-1.5 rounded-full bg-[#fbbf24] animate-pulse group-hover:bg-[#fde68a]" />
+            {t("hero.invest_link")}
           </a>
         </div>
       </div>

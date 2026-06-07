@@ -9,6 +9,7 @@ export default function Footer() {
     { key: "technology", href: "#technology" },
     { key: "phb", href: "#phb" },
     { key: "impact", href: "#impact" },
+    { key: "invest", href: "#invest", highlight: true },
     { key: "about", href: "#about" },
     { key: "contact", href: "#contact" },
   ];
@@ -37,7 +38,11 @@ export default function Footer() {
                 <a
                   key={l.key}
                   href={l.href}
-                  className="text-white/45 hover:text-white text-sm transition-colors duration-200"
+                  className={
+                    l.highlight
+                      ? "text-[#fbbf24]/70 hover:text-[#fbbf24] text-sm transition-colors duration-200"
+                      : "text-white/45 hover:text-white text-sm transition-colors duration-200"
+                  }
                 >
                   {t(`nav.${l.key}`)}
                 </a>

@@ -5,6 +5,7 @@ export const cs = {
     process: "Proces",
     phb: "PHB",
     impact: "Dopad",
+    invest: "Investoři",
     contact: "Kontakt",
   },
   problem: {
@@ -36,6 +37,7 @@ export const cs = {
   hero: {
     badge: "Čistá chemie budoucnosti",
     headline: "Proměňujeme\nCO₂ v plast",
+    invest_link: "Otevřeno pre-seed kolo →",
     subheadline:
       "Elektrokatalýzou a syntetickou biologií přeměňujeme průmyslové emise CO₂ na formiát a poté na biodegradabilní bioplast PHB.",
     cta_primary: "Jak to funguje",
@@ -200,6 +202,50 @@ export const cs = {
     info: {
       location: "Praha, Česká republika",
       email: "hello@formitech.cz",
+    },
+  },
+  invest: {
+    badge: "Investiční příležitost",
+    headline: "Pre-seed kolo\nje otevřeno",
+    subheadline: "Hledáme prvního investora, který nám pomůže postavit pilotní jednotku a validovat cestu ke komerčnímu provozu.",
+    funding: {
+      amount: "100k",
+      currency: "€",
+      label: "pre-seed",
+      description: "Otevíráme první investiční kolo na stavbu pilotní jednotky v areálu Velkopopovického pivovaru. Prostředky půjdou přímo do validace technologie a prvních zákaznických dodávek.",
+      cta: "Chci investovat",
+      use: [
+        { label: "Pilotní jednotka", desc: "Stavba elektrolyzéru + bioreaktoru ve Velkopopovicích", pct: "55 %" },
+        { label: "Výzkum & vývoj", desc: "Optimalizace procesu, zvýšení výtěžnosti PHB", pct: "30 %" },
+        { label: "Certifikace & regulace", desc: "Procesní certifikace, zákaznická validace", pct: "15 %" },
+      ],
+    },
+    revenue: {
+      title: "Tři zdroje příjmů",
+      streams: [
+        {
+          label: "Prodej PHB pelet",
+          desc: "B2B prodej biodegradabilních termoplastových pelet zpracovatelům. Cílová cena €5–8/kg při produkci 70 tis. kg/rok.",
+          highlight: "€5–8 / kg",
+        },
+        {
+          label: "Úspora EU ETS povolenek",
+          desc: "Průmysloví partneři sdílejí část ušetřených emisních nákladů. Každá zachycená tuna CO₂ = €75–149 ušetřených.",
+          highlight: "€75–149 / t CO₂",
+        },
+        {
+          label: "Licencování procesu",
+          desc: "Střednědobý cíl: licencovat elektrokatalytický proces dalším evropským výrobcům bez nutnosti vlastní produkce.",
+          highlight: "střední horizont",
+        },
+      ],
+    },
+    market: {
+      title: "Adresovatelný trh",
+      subtitle: "Projekce 2030",
+      tam: { label: "TAM", name: "Celkový trh", desc: "Evropský trh biodegradabilních termoplastů", value: "€800M / rok" },
+      sam: { label: "SAM", name: "Dostupný trh", desc: "Výrobci u CO₂ zdrojů v CZ + DE + AT + SK", value: "€90M / rok" },
+      som: { label: "SOM", name: "Reálný cíl", desc: "Formitech 2030 při kapacitě 70 tis. kg / rok", value: "€3,5M / rok" },
     },
   },
   footer: {

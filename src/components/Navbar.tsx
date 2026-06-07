@@ -27,6 +27,7 @@ export default function Navbar() {
     { key: "technology", href: "#technology" },
     { key: "phb", href: "#phb" },
     { key: "impact", href: "#impact" },
+    { key: "invest", href: "#invest", highlight: true },
     { key: "about", href: "#about" },
     { key: "contact", href: "#contact" },
   ];
@@ -57,7 +58,11 @@ export default function Navbar() {
             <a
               key={l.key}
               href={l.href}
-              className="text-sm text-white/60 hover:text-white transition-colors duration-200"
+              className={
+                l.highlight
+                  ? "text-sm font-medium text-[#fbbf24] hover:text-[#fde68a] transition-colors duration-200"
+                  : "text-sm text-white/60 hover:text-white transition-colors duration-200"
+              }
             >
               {t(`nav.${l.key}`)}
             </a>
@@ -103,7 +108,11 @@ export default function Navbar() {
               key={l.key}
               href={l.href}
               onClick={() => setMenuOpen(false)}
-              className="text-sm text-white/60 hover:text-white transition-colors"
+              className={
+                l.highlight
+                  ? "text-sm font-medium text-[#fbbf24] hover:text-[#fde68a] transition-colors"
+                  : "text-sm text-white/60 hover:text-white transition-colors"
+              }
             >
               {t(`nav.${l.key}`)}
             </a>
